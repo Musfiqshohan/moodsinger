@@ -173,6 +173,58 @@
     </style>
 
 
+    <style>
+        /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+    </style>
+
+
+
     <script>
     //Defining variable based on unique ID
 
@@ -229,6 +281,27 @@ function showCategory(xx){
 
 
     </script>
+
+
+
+    <script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+
 
 
 </head>
@@ -329,11 +402,11 @@ function showCategory(xx){
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#latestalbum">Home</a></li>
-                        <li><a href="/upcoming_events">Upcoming Events</a></li>
-                        <li><a href="#joinus">Notification</a></li>
-                        <li><a href="#portfolio">Profile</a></li>
-                        <li><a href="#events">Log out</a></li>
+                        <li><a href="#latestalbum">Latest Album</a></li>
+                        <li><a href="#featuredalbum">Featured Album</a></li>
+                        <li><a href="#joinus">Join Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#events">Events</a></li>
 {#                        <li><a href="#team">Team</a></li>#}
 {#                        <li><a href="#contact">Contact</a></li>#}
                     </ul>
@@ -347,51 +420,7 @@ function showCategory(xx){
     </header>
     <!--/ header end -->
 
-    <!-- banner area -->
-    <div class="banner">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox" >
-                <div class="item active">
-                    <img src="../static/img/banner/b1.jpg" alt="...">
-                    <div class="container">
-                        <!-- banner caption -->
-                        <div class="carousel-caption slide-one">
-                            <!-- heading -->
-                            <h2 class="animated fadeInLeftBig"><i class="fa fa-music"></i> We Have a Song For You!</h2>
-                            <!-- paragraph -->
-                            <h3 class="animated fadeInRightBig">Find More Innovative &amp; Creative Music Albums.</h3>
-                            <!-- button -->
-                            <a href="#" class="animated fadeIn btn btn-theme">Play It</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../static/img/banner/b2.jpg" alt="...">
-                    <div class="container">
-                        <!-- banner caption -->
-                        <div class="carousel-caption slide-two">
-                            <!-- heading -->
-                            <h2 class="animated fadeInLeftBig"><i class="fa fa-headphones"></i> Listen It...</h2>
-                            <!-- paragraph -->
-                            <h3 class="animated fadeInRightBig">Lorem ipsum dolor sit amet, consectetur elit.</h3>
-                            <!-- button -->
-                            <a href="#" class="animated fadeIn btn btn-theme">Listen Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="fa fa-arrow-left" aria-hidden="true"></span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="fa fa-arrow-right" aria-hidden="true"></span>
-            </a>
-        </div>
-    </div>
-    <!--/ banner end -->
 
     <!-- block for animate navigation menu -->
     <div class="nav-animate"></div>
@@ -444,78 +473,190 @@ function showCategory(xx){
 #}
 
 
-
-
-
-<!-- latest release starts-->
-<div id="album" class="releases spacer">
-<h3><span class="glyphicon glyphicon-music"></span> Popular on Moodsinger </h3>
-<div class="row">
-	<div  style="cursor: pointer;" onmouseover="playAudio('audioID1')" onmouseout="stopAudio('audioID1')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/3.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div  style="cursor: pointer;" onmouseover="playAudio('audioID2')" onmouseout="stopAudio('audioID2')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/1.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div  style="cursor: pointer;" onmouseover="playAudio('audioID3')" onmouseout="stopAudio('audioID3')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/2.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div  style="cursor: pointer;" onmouseover="playAudio('audioID4')" onmouseout="stopAudio('audioID4')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/4.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div style="cursor: pointer;" onmouseover="playAudio('audioID4')" onmouseout="stopAudio('audioID4')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/4.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div style="cursor: pointer;" onmouseover="playAudio('audioID3')" onmouseout="stopAudio('audioID3')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/2.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div style="cursor: pointer;" onmouseover="playAudio('audioID2')" onmouseout="stopAudio('audioID2')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/3.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div style="cursor: pointer;" onmouseover="playAudio('audioID1')" onmouseout="stopAudio('audioID1')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/1.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-</div>
-</div>
-<!-- latest release ends-->
-
-<div id="album" class="releases spacer">
-<h3><span class="glyphicon glyphicon-music"></span> You Recently Listened </h3>
-<div class="row">
-	<div  style="cursor: pointer;" onmouseover="playAudio('audioID1')" onmouseout="stopAudio('audioID1')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/3.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div  style="cursor: pointer;" onmouseover="playAudio('audioID2')" onmouseout="stopAudio('audioID2')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/1.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div  style="cursor: pointer;" onmouseover="playAudio('audioID3')" onmouseout="stopAudio('audioID3')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/2.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-	<div  style="cursor: pointer;" onmouseover="playAudio('audioID4')" onmouseout="stopAudio('audioID4')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/4.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
-
-</div>
+    <div class="tab" style="margin-top: 100px ; display: inline-block;">
+  <button class="tablinks" onclick="openCity(event, 'London')" style="min-width: 200px">Playlist</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')" style="min-width: 200px">Following</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')" style="min-width: 200px">History</button>
 </div>
 
+<div id="London" class="tabcontent">
 
+    <!-- Hero block area -->
+    <div id="latestalbum" class="hero pad" style="padding-top: 30px">
+        <div class="container">
+            <!-- hero content -->
+            <div class="hero-content ">
+                <!-- heading -->
+                <h2>Your Playlist</h2>
+                <hr>
+                <!-- paragraph -->
+                <p>We sing the best <strong class="theme-color">Songs</strong> and now we control the world best <strong
+                        class="theme-color">Music</strong>.</p>
+            </div>
+            <!-- hero play list -->
+            <div class="hero-playlist">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <!-- music album image -->
+                        <div class="figure">
+                            <!-- image -->
+                            <img class="img-responsive" src="../static/img/album/1.jpg" alt=""/>
+                            <!-- disk image -->
+                            <img class="img-responsive disk" src="../static/img/album/disk.png" alt=""/>
+                        </div>
+                        <!-- album details -->
+                        <div class="album-details">
+                            <!-- title -->
+                            <h4>Perfect Melodi</h4>
+                            <!-- composed by -->
+                            <h5>By Himanshu</h5>
+                            <!-- paragraph -->
+                            <p>Lorem Ipsum has been the industry's standard dummy text ever since 1500.</p>
+                            <!-- button -->
+                            <a href="#" class="btn btn-lg btn-theme" id="playNowBtn"><i class="fa fa-play"></i>&nbsp;
+                                Play Now</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <!-- play list -->
+                        <div class="playlist-content" style="max-width: 450px">
+                            <ul class="list-unstyled">
+                                <li class="playlist-number">
+                                    <!-- song information -->
+                                    <div class="song-info">
+                                        <!-- song title -->
+                                        <h4>Moodsinger Song Track One</h4>
+                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
+                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
+                                    </div>
+                                    <!-- music icon -->
+                                    <div class="music-icon">
+                                        <a href="#"><i class="fa fa-play"></i></a>
+                                        <a href="#"><i class="fa fa-pause"></i></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="playlist-number">
+                                    <!-- song information -->
+                                    <div class="song-info">
+                                        <!-- song title -->
+                                        <h4>Moodsinger Song Track Two</h4>
+                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
+                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
+                                    </div>
+                                    <!-- music icon -->
+                                    <div class="music-icon">
+                                        <a href="#"><i class="fa fa-play"></i></a>
+                                        <a href="#"><i class="fa fa-pause"></i></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="playlist-number">
+                                    <!-- song information -->
+                                    <div class="song-info">
+                                        <!-- song title -->
+                                        <h4>Moodsinger Song Track Three</h4>
+                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
+                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
+                                    </div>
+                                    <!-- music icon -->
+                                    <div class="music-icon">
+                                        <a href="#"><i class="fa fa-play"></i></a>
+                                        <a href="#"><i class="fa fa-pause"></i></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="playlist-number">
+                                    <!-- song information -->
+                                    <div class="song-info">
+                                        <!-- song title -->
+                                        <h4>Moodsinger Song Track Four</h4>
+                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
+                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
+                                    </div>
+                                    <!-- music icon -->
+                                    <div class="music-icon">
+                                        <a href="#"><i class="fa fa-play"></i></a>
+                                        <a href="#"><i class="fa fa-pause"></i></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="playlist-number">
+                                    <!-- song information -->
+                                    <div class="song-info">
+                                        <!-- song title -->
+                                        <h4>Moodsinger Song Track Five</h4>
+                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
+                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
+                                    </div>
+                                    <!-- music icon -->
+                                    <div class="music-icon">
+                                        <a href="#"><i class="fa fa-play"></i></a>
+                                        <a href="#"><i class="fa fa-pause"></i></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="playlist-number">
+                                    <!-- song information -->
+                                    <div class="song-info">
+                                        <!-- song title -->
+                                        <h4>Moodsinger Song Track Six</h4>
+                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
+                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
+                                    </div>
+                                    <!-- music icon -->
+                                    <div class="music-icon">
+                                        <a href="#"><i class="fa fa-play"></i></a>
+                                        <a href="#"><i class="fa fa-pause"></i></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="playlist-number">
+                                    <!-- song information -->
+                                    <div class="song-info">
+                                        <!-- song title -->
+                                        <h4>Moodsinger Song Track Seven</h4>
+                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
+                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
+                                    </div>
+                                    <!-- music icon -->
+                                    <div class="music-icon">
+                                        <a href="#"><i class="fa fa-play"></i></a>
+                                        <a href="#"><i class="fa fa-pause"></i></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                                <li class="playlist-number">
+                                    <!-- song information -->
+                                    <div class="song-info">
+                                        <!-- song title -->
+                                        <h4>Moodsinger Song Track Eight</h4>
+                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
+                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
+                                    </div>
+                                    <!-- music icon -->
+                                    <div class="music-icon">
+                                        <a href="#"><i class="fa fa-play"></i></a>
+                                        <a href="#"><i class="fa fa-pause"></i></a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ hero end -->
+</div>
 
-<audio id="audioID1">
-	<source src="../static/audio/audio1.mp3">
-	<source src="../static/audio/audio1.mp3">
-	Your browser isn't invited for super fun audio time.
-</audio>
-
-    <audio id="audioID2">
-	<source src="../static/audio/audio2.mp3">
-	<source src="../static/audio/audio2.mp3">
-	Your browser isn't invited for super fun audio time.
-</audio>
-
-        <audio id="audioID3">
-	<source src="../static/audio/audio3.mp3">
-	<source src="../static/audio/audio3.mp3">
-	Your browser isn't invited for super fun audio time.
-</audio>
-
-        <audio id="audioID4">
-	<source src="../static/audio/audio4.mp3">
-	<source src="../static/audio/audio4.mp3">
-	Your browser isn't invited for super fun audio time.
-</audio>
-
-
-{#People to follow#}
+<div id="Paris" class="tabcontent">
+  {#People to follow#}
 
     <div class="container-fluid" id="teamMembers">
             <div class="col-md-12">
-                <h2 class="ser-title">Follow Your Celebrity</h2><br>
+                <h2 class="ser-title">See what your celebrities are listening</h2><br>
             </div>
             <div class="row">
                 {#                {% for psychologist in psychologist_list %}#}
@@ -745,10 +886,84 @@ function showCategory(xx){
             </div>
         </div>
 
-
-
 {#People to follow#}
 
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <div id="album" class="releases spacer">
+<h3><span class="glyphicon glyphicon-music"></span> You Recently Listened </h3>
+<div class="row">
+	<div  style="cursor: pointer;" onmouseover="playAudio('audioID1')" onmouseout="stopAudio('audioID1')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/3.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div  style="cursor: pointer;" onmouseover="playAudio('audioID2')" onmouseout="stopAudio('audioID2')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/1.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div  style="cursor: pointer;" onmouseover="playAudio('audioID3')" onmouseout="stopAudio('audioID3')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/2.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div  style="cursor: pointer;" onmouseover="playAudio('audioID4')" onmouseout="stopAudio('audioID4')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/4.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- latest release starts-->
+<div id="album" class="releases spacer">
+<h3><span class="glyphicon glyphicon-music"></span> Popular on Moodsinger </h3>
+<div class="row">
+	<div  style="cursor: pointer;" onmouseover="playAudio('audioID1')" onmouseout="stopAudio('audioID1')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/3.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div  style="cursor: pointer;" onmouseover="playAudio('audioID2')" onmouseout="stopAudio('audioID2')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/1.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div  style="cursor: pointer;" onmouseover="playAudio('audioID3')" onmouseout="stopAudio('audioID3')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/2.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div  style="cursor: pointer;" onmouseover="playAudio('audioID4')" onmouseout="stopAudio('audioID4')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/4.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div style="cursor: pointer;" onmouseover="playAudio('audioID4')" onmouseout="stopAudio('audioID4')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/4.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div style="cursor: pointer;" onmouseover="playAudio('audioID3')" onmouseout="stopAudio('audioID3')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/2.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div style="cursor: pointer;" onmouseover="playAudio('audioID2')" onmouseout="stopAudio('audioID2')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/3.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+
+	<div style="cursor: pointer;" onmouseover="playAudio('audioID1')" onmouseout="stopAudio('audioID1')" class="col-sm-3 col-xs-12"><div class="album"><img src="../static/assets/images/1.jpg" class="img-responsive" alt="music theme" /><div class="albumdetail"><h5 style="color:#d7dce5">Crazy Freso</h5><a href="#" class="listen" data-toggle="modal" data-target="#albumdetail"><span class="glyphicon glyphicon-headphones"></span> Listen Song</a></div></div></div>
+</div>
+</div>
+<!-- latest release ends-->
+
+
+
+
+
+<audio id="audioID1">
+	<source src="../static/audio/audio1.mp3">
+	<source src="../static/audio/audio1.mp3">
+	Your browser isn't invited for super fun audio time.
+</audio>
+
+    <audio id="audioID2">
+	<source src="../static/audio/audio2.mp3">
+	<source src="../static/audio/audio2.mp3">
+	Your browser isn't invited for super fun audio time.
+</audio>
+
+        <audio id="audioID3">
+	<source src="../static/audio/audio3.mp3">
+	<source src="../static/audio/audio3.mp3">
+	Your browser isn't invited for super fun audio time.
+</audio>
+
+        <audio id="audioID4">
+	<source src="../static/audio/audio4.mp3">
+	<source src="../static/audio/audio4.mp3">
+	Your browser isn't invited for super fun audio time.
+</audio>
 
 
 
@@ -759,174 +974,9 @@ function showCategory(xx){
 
 
 
-    <!-- Hero block area -->
-    <div id="latestalbum" class="hero pad">
-        <div class="container">
-            <!-- hero content -->
-            <div class="hero-content ">
-                <!-- heading -->
-                <h2>Latest Album</h2>
-                <hr>
-                <!-- paragraph -->
-                <p>We sing the best <strong class="theme-color">Songs</strong> and now we control the world best <strong
-                        class="theme-color">Music</strong>.</p>
-            </div>
-            <!-- hero play list -->
-            <div class="hero-playlist">
-                <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <!-- music album image -->
-                        <div class="figure">
-                            <!-- image -->
-                            <img class="img-responsive" src="../static/img/album/1.jpg" alt=""/>
-                            <!-- disk image -->
-                            <img class="img-responsive disk" src="../static/img/album/disk.png" alt=""/>
-                        </div>
-                        <!-- album details -->
-                        <div class="album-details">
-                            <!-- title -->
-                            <h4>Perfect Melodi</h4>
-                            <!-- composed by -->
-                            <h5>By Himanshu</h5>
-                            <!-- paragraph -->
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since 1500.</p>
-                            <!-- button -->
-                            <a href="#" class="btn btn-lg btn-theme" id="playNowBtn"><i class="fa fa-play"></i>&nbsp;
-                                Play Now</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <!-- play list -->
-                        <div class="playlist-content">
-                            <ul class="list-unstyled">
-                                <li class="playlist-number">
-                                    <!-- song information -->
-                                    <div class="song-info">
-                                        <!-- song title -->
-                                        <h4>Moodsinger Song Track One</h4>
-                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
-                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-                                    </div>
-                                    <!-- music icon -->
-                                    <div class="music-icon">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                        <a href="#"><i class="fa fa-pause"></i></a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                                <li class="playlist-number">
-                                    <!-- song information -->
-                                    <div class="song-info">
-                                        <!-- song title -->
-                                        <h4>Moodsinger Song Track Two</h4>
-                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
-                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-                                    </div>
-                                    <!-- music icon -->
-                                    <div class="music-icon">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                        <a href="#"><i class="fa fa-pause"></i></a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                                <li class="playlist-number">
-                                    <!-- song information -->
-                                    <div class="song-info">
-                                        <!-- song title -->
-                                        <h4>Moodsinger Song Track Three</h4>
-                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
-                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-                                    </div>
-                                    <!-- music icon -->
-                                    <div class="music-icon">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                        <a href="#"><i class="fa fa-pause"></i></a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                                <li class="playlist-number">
-                                    <!-- song information -->
-                                    <div class="song-info">
-                                        <!-- song title -->
-                                        <h4>Moodsinger Song Track Four</h4>
-                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
-                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-                                    </div>
-                                    <!-- music icon -->
-                                    <div class="music-icon">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                        <a href="#"><i class="fa fa-pause"></i></a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                                <li class="playlist-number">
-                                    <!-- song information -->
-                                    <div class="song-info">
-                                        <!-- song title -->
-                                        <h4>Moodsinger Song Track Five</h4>
-                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
-                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-                                    </div>
-                                    <!-- music icon -->
-                                    <div class="music-icon">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                        <a href="#"><i class="fa fa-pause"></i></a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                                <li class="playlist-number">
-                                    <!-- song information -->
-                                    <div class="song-info">
-                                        <!-- song title -->
-                                        <h4>Moodsinger Song Track Six</h4>
-                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
-                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-                                    </div>
-                                    <!-- music icon -->
-                                    <div class="music-icon">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                        <a href="#"><i class="fa fa-pause"></i></a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                                <li class="playlist-number">
-                                    <!-- song information -->
-                                    <div class="song-info">
-                                        <!-- song title -->
-                                        <h4>Moodsinger Song Track Seven</h4>
-                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
-                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-                                    </div>
-                                    <!-- music icon -->
-                                    <div class="music-icon">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                        <a href="#"><i class="fa fa-pause"></i></a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                                <li class="playlist-number">
-                                    <!-- song information -->
-                                    <div class="song-info">
-                                        <!-- song title -->
-                                        <h4>Moodsinger Song Track Eight</h4>
-                                        <p><strong>Album</strong>: Title &nbsp;|&nbsp; <strong>Type</strong>: Rock
-                                            &nbsp;|&nbsp; <strong>Singer</strong>: Dawn</p>
-                                    </div>
-                                    <!-- music icon -->
-                                    <div class="music-icon">
-                                        <a href="#"><i class="fa fa-play"></i></a>
-                                        <a href="#"><i class="fa fa-pause"></i></a>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/ hero end -->
+
+
+
 
     <!-- promo -->
     <div class="promo parallax-one pad">
