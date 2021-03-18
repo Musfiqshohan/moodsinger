@@ -1,0 +1,444 @@
+{% extends "header.html" %}
+{% block header_footer %}
+
+<head>
+
+	<link rel="stylesheet" href="../static/assets/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="../static/assets/style.css"> <!-- Resource style -->
+    <script src="../static/assets/modernizr.js"></script> <!-- Modernizr -->
+
+
+
+</head>
+
+    <div class="default-heading" style="margin-top: 80px ; ">
+                <!-- heading -->
+                <h2>Pricing Tables</h2>
+            </div>
+
+    <div style="margin-top: -50px ; background-color: #173d50 ;min-width: 1100px;; " class="cd-pricing-container cd-has-margins">
+		<div class="cd-pricing-switcher" >
+			<p class="fieldset" style="margin-top: 30px">
+				<input type="radio" name="duration-2" value="monthly" id="monthly-2" checked>
+				<label for="monthly-2">Monthly</label>
+				<input type="radio" name="duration-2" value="yearly" id="yearly-2">
+				<label for="yearly-2">Yearly</label>
+				<span class="cd-switch"></span>
+			</p>
+		</div> <!-- .cd-pricing-switcher -->
+
+		<ul style="box-shadow: 5px 10px 10px 5px #252c37" class="cd-pricing-list cd-bounce-invert">
+			<li>
+				<ul class="cd-pricing-wrapper">
+					<li data-type="monthly" class="is-visible">
+						<header class="cd-pricing-header">
+							<h2>Basic</h2>
+
+							<div class="cd-price">
+								<span class="cd-currency">$</span>
+								<span class="cd-value">30</span>
+								<span class="cd-duration">mo</span>
+							</div>
+						</header> <!-- .cd-pricing-header -->
+
+						<div class="cd-pricing-body">
+							<ul class="cd-pricing-features">
+								<li><em>256MB</em> Memory</li>
+								<li><em>1</em> User</li>
+								<li><em>1</em> Website</li>
+								<li><em>1</em> Domain</li>
+								<li><em>Unlimited</em> Bandwidth</li>
+								<li><em>24/7</em> Support</li>
+							</ul>
+						</div> <!-- .cd-pricing-body -->
+
+						<footer class="cd-pricing-footer">
+							<a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+						</footer>  <!-- .cd-pricing-footer -->
+					</li>
+
+					<li data-type="yearly" class="is-hidden">
+						<header class="cd-pricing-header">
+							<h2>Basic</h2>
+
+							<div class="cd-price">
+								<span class="cd-currency">$</span>
+								<span class="cd-value">320</span>
+								<span class="cd-duration">yr</span>
+							</div>
+						</header> <!-- .cd-pricing-header -->
+
+						<div class="cd-pricing-body">
+							<ul class="cd-pricing-features">
+								<li><em>256MB</em> Memory</li>
+								<li><em>1</em> User</li>
+								<li><em>1</em> Website</li>
+								<li><em>1</em> Domain</li>
+								<li><em>Unlimited</em> Bandwidth</li>
+								<li><em>24/7</em> Support</li>
+							</ul>
+						</div> <!-- .cd-pricing-body -->
+
+						<footer class="cd-pricing-footer">
+							<a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+						</footer>  <!-- .cd-pricing-footer -->
+					</li>
+				</ul> <!-- .cd-pricing-wrapper -->
+			</li>
+
+			<li class="cd-popular">
+				<ul class="cd-pricing-wrapper">
+					<li data-type="monthly" class="is-visible">
+						<header class="cd-pricing-header">
+							<h2>Popular</h2>
+							<div class="cd-price">
+								<span class="cd-currency">$</span>
+								<span class="cd-value">60</span>
+								<span class="cd-duration">mo</span>
+							</div>
+						</header> <!-- .cd-pricing-header -->
+
+						<div class="cd-pricing-body">
+							<ul class="cd-pricing-features">
+								<li><em>512MB</em> Memory</li>
+								<li><em>3</em> Users</li>
+								<li><em>5</em> Websites</li>
+								<li><em>7</em> Domains</li>
+								<li><em>Unlimited</em> Bandwidth</li>
+								<li><em>24/7</em> Support</li>
+							</ul>
+						</div> <!-- .cd-pricing-body -->
+
+						<footer class="cd-pricing-footer">
+							<a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+						</footer>  <!-- .cd-pricing-footer -->
+					</li>
+
+					<li data-type="yearly" class="is-hidden">
+						<header class="cd-pricing-header">
+							<h2>Popular</h2>
+
+							<div class="cd-price">
+								<span class="cd-currency">$</span>
+								<span class="cd-value">630</span>
+								<span class="cd-duration">yr</span>
+							</div>
+						</header> <!-- .cd-pricing-header -->
+
+						<div class="cd-pricing-body">
+							<ul class="cd-pricing-features">
+								<li><em>512MB</em> Memory</li>
+								<li><em>3</em> Users</li>
+								<li><em>5</em> Websites</li>
+								<li><em>7</em> Domains</li>
+								<li><em>Unlimited</em> Bandwidth</li>
+								<li><em>24/7</em> Support</li>
+							</ul>
+						</div> <!-- .cd-pricing-body -->
+
+						<footer class="cd-pricing-footer">
+							<a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+						</footer>  <!-- .cd-pricing-footer -->
+					</li>
+				</ul> <!-- .cd-pricing-wrapper -->
+			</li>
+
+			<li>
+				<ul class="cd-pricing-wrapper">
+					<li data-type="monthly" class="is-visible">
+						<header class="cd-pricing-header">
+							<h2>Premier</h2>
+
+							<div class="cd-price">
+								<span class="cd-currency">$</span>
+								<span class="cd-value">90</span>
+								<span class="cd-duration">mo</span>
+							</div>
+						</header> <!-- .cd-pricing-header -->
+
+						<div class="cd-pricing-body">
+							<ul class="cd-pricing-features">
+								<li><em>1024MB</em> Memory</li>
+								<li><em>5</em> Users</li>
+								<li><em>10</em> Websites</li>
+								<li><em>10</em> Domains</li>
+								<li><em>Unlimited</em> Bandwidth</li>
+								<li><em>24/7</em> Support</li>
+							</ul>
+						</div> <!-- .cd-pricing-body -->
+
+						<footer class="cd-pricing-footer">
+							<a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+						</footer>  <!-- .cd-pricing-footer -->
+					</li>
+
+					<li data-type="yearly" class="is-hidden">
+						<header class="cd-pricing-header">
+							<h2>Premier</h2>
+
+							<div class="cd-price">
+								<span class="cd-currency">$</span>
+								<span class="cd-value">950</span>
+								<span class="cd-duration">yr</span>
+							</div>
+						</header> <!-- .cd-pricing-header -->
+
+						<div class="cd-pricing-body">
+							<ul class="cd-pricing-features">
+								<li><em>1024MB</em> Memory</li>
+								<li><em>5</em> Users</li>
+								<li><em>10</em> Websites</li>
+								<li><em>10</em> Domains</li>
+								<li><em>Unlimited</em> Bandwidth</li>
+								<li><em>24/7</em> Support</li>
+							</ul>
+						</div> <!-- .cd-pricing-body -->
+
+						<footer class="cd-pricing-footer">
+							<a class="cd-select" href="http://codyhouse.co/?p=429">Select</a>
+						</footer>  <!-- .cd-pricing-footer -->
+					</li>
+				</ul> <!-- .cd-pricing-wrapper -->
+			</li>
+		</ul> <!-- .cd-pricing-list -->
+	</div> <!-- .cd-pricing-container -->
+
+
+
+    <!-- news letter -->
+    <div  class="news-letter">
+        <div class="container">
+            <!-- news letter inner content -->
+            <div class="news-content ">
+                <!-- heading -->
+                <h3>Sign Up For Moodsinger</h3>
+                <!-- paragraph -->
+                <p><strong>Contact Us</strong> and let us know if you have any questions, Don't forget to subscribe for
+                    more awesome stuff by typing mail bellow.</p>
+                <!-- subscribe form -->
+                <form>
+                    <div class="input-group">
+                        <input type="text" class="form-control input-lg" placeholder="Email">
+                        <span class="input-group-btn">
+									<button class="btn btn-default btn-lg" type="button">Subscribe</button>
+								</span>
+                    </div><!-- /input-group -->
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- news letter end -->
+
+        <!-- about -->
+    <div class="about" id="team">
+        <div class="container">
+            <!-- default heading -->
+            <div class="default-heading">
+                <!-- heading -->
+                <h2>Who We Are?</h2>
+            </div>
+            <!-- about what we are like content -->
+            <div class="about-what-we">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <div class="what-we-item ">
+                            <!-- heading with icon -->
+                            <h3><i class="fa fa-heartbeat"></i> What we do?</h3>
+                            <!-- paragraph -->
+                            <p>We play music for you.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="what-we-item ">
+                            <!-- heading with icon -->
+                            <h3><i class="fa fa-hand-o-up"></i> Why choose us?</h3>
+                            <!-- paragraph -->
+                            <p> We provide innovative features to meet your music thirst.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="what-we-item ">
+                            <!-- heading with icon -->
+                            <h3><i class="fa fa-map-marker"></i> Where we are?</h3>
+                            <!-- paragraph -->
+                            <p>We are worldwide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- our team -->
+        <div class="team">
+            <div class="container">
+                <!-- Team Member's Details -->
+                <div class="team-content">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6">
+                            <!-- Team Member -->
+                            <div class="team-member  delay-one">
+                                <!-- Image Hover Block -->
+                                <div class="member-img">
+                                    <!-- Image  -->
+                                    <img class="img-responsive" src="../static/img/user/1.jpg" alt=""/>
+                                    <!-- Hover block -->
+                                    <div class="social text-center">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Member Details -->
+                                <h3>Stacey Kowalski</h3>
+                                <span class="designation">Guitarist</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <!-- Team Member -->
+                            <div class="team-member  delay-two">
+                                <!-- Image Hover Block -->
+                                <div class="member-img">
+                                    <!-- Image  -->
+                                    <img class="img-responsive" src="../static/img/user/2.jpg" alt=""/>
+                                    <!-- Hover block -->
+                                    <div class="social text-center">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Member Details -->
+                                <h3>Joanna Koo</h3>
+                                <span class="designation">Clarinetist</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <!-- Team Member -->
+                            <div class="team-member  delay-three">
+                                <!-- Image Hover Block -->
+                                <div class="member-img">
+                                    <!-- Image  -->
+                                    <img class="img-responsive" src="../static/img/user/3.jpg" alt=""/>
+                                    <!-- Hover block -->
+                                    <div class="social text-center">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Member Details -->
+                                <h3>Mark Laredo</h3>
+                                <span class="designation">Accordionist</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6">
+                            <!-- Team Member -->
+                            <div class="team-member  delay-four">
+                                <!-- Image Hover Block -->
+                                <div class="member-img">
+                                    <!-- Image  -->
+                                    <img class="img-responsive" src="../static/img/user/4.jpg" alt=""/>
+                                    <!-- Hover block -->
+                                    <div class="social text-center">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                                <!-- Member Details -->
+                                <h3>Belie Costa</h3>
+                                <span class="designation">Keyboardist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about end -->
+
+
+        <!-- contact -->
+    <div class="contact pad" id="contact">
+        <div class="container">
+            <!-- default heading -->
+            <div class="default-heading">
+                <!-- heading -->
+                <h2>Contact Us</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-4">
+                    <!-- contact item -->
+                    <div class="contact-item ">
+                        <!-- big icon -->
+                        <i class="fa fa-street-view"></i>
+                        <!-- contact details  -->
+                        <span class="contact-details">#30/67, 5th Street, Mega Market Circle, New Delhi - 625001</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <!-- contact item -->
+                    <div class="contact-item ">
+                        <!-- big icon -->
+                        <i class="fa fa-wifi"></i>
+                        <!-- contact details  -->
+                        <span class="contact-details">music.site@Moodsinger.com</span>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4">
+                    <!-- contact item -->
+                    <div class="contact-item ">
+                        <!-- big icon -->
+                        <i class="fa fa-phone"></i>
+                        <!-- contact details  -->
+                        <span class="contact-details">555 555 5555</span>
+                    </div>
+                </div>
+            </div>
+            <!-- form content -->
+            <div class="form-content ">
+                <!-- paragraph -->
+                <p>Do you have any idea in your mind? Drop us a line.</p>
+                <form role="form" id="contactForm" method="post">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                       placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="text" class="form-control" id="phone" name="phone"
+                                       placeholder="Enter phone">
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="9"
+                                          placeholder="Enter message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-lg btn-theme">Send Message</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- contact end -->
+
+<script src="../static/assets/jquery-2.1.1.js"></script>
+<script src="../static/assets/main.js"></script>
+{% endblock %}

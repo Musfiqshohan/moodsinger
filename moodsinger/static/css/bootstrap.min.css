@@ -1396,7 +1396,7 @@ img {
 
 .carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
     display: block;
-    max-width: 80%;
+    max-width: 100%;
     height: auto
 }
 
@@ -1829,7 +1829,7 @@ pre code {
 }
 
 .container {
-    padding-right: 15px;
+    padding-right: 100px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto
@@ -4571,14 +4571,14 @@ select[multiple].input-group-sm > .form-control, select[multiple].input-group-sm
 }
 
 .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
-    margin-right: -15px;
-    margin-left: -15px
+    margin-right: -150px;
+    margin-left: -55px
 }
 
 @media (min-width: 768px) {
     .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
-        margin-right: 0;
-        margin-left: 0
+        margin-right: -150px;
+    margin-left: -55px
     }
 }
 
